@@ -1,39 +1,42 @@
 <template>
-  <form
-    action="/"
-    method="post"
-    novalidate="true"
-    class="w-full mx-auto max-w-sm p-10 bg-white"
-    @submit.prevent="submit"
-  >
-    <BaseMessage
-      v-for="(error, i) in errors"
-      :key="i"
-      type="danger"
-      class="mb-4"
+  <div class="max-w-sm w-full">
+    <h1 class="text-center font-medium text-6xl mb-6">Welcome.</h1>
+    <form
+      action="/"
+      method="post"
+      novalidate="true"
+      class="w-full mx-auto p-10 bg-white"
+      @submit.prevent="submit"
     >
-      {{ error }}
-    </BaseMessage>
-    <BaseInput
-      input-id="email"
-      input-type="email"
-      label="Email"
-      :danger="isEmailError"
-      v-model="email"
-    />
-    <BaseInput
-      input-id="password"
-      input-type="password"
-      label="Password"
-      :danger="isPasswordError"
-      v-model="password"
-    />
-    <BaseButton
-      tag="input"
-      type="submit"
-      value="Log In"
-    >Log In</BaseButton>
-  </form>
+      <BaseMessage
+        v-for="(error, i) in errors"
+        :key="i"
+        type="danger"
+        class="mb-4"
+      >
+        {{ error }}
+      </BaseMessage>
+      <BaseInput
+        input-id="email"
+        input-type="email"
+        label="Email"
+        :danger="isEmailError"
+        v-model="email"
+      />
+      <BaseInput
+        input-id="password"
+        input-type="password"
+        label="Password"
+        :danger="isPasswordError"
+        v-model="password"
+      />
+      <BaseButton
+        tag="input"
+        type="submit"
+        value="Log In"
+      >Log In</BaseButton>
+    </form>
+  </div>
 </template>
 
 <script>
