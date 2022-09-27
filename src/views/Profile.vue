@@ -42,7 +42,7 @@
       danger
       @click.native="onLogout"
       class="mt-4"
-    >Logout</BaseButton>
+    >Log Out</BaseButton>
   </div>
 </template>
 
