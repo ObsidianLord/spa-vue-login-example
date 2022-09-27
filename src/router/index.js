@@ -1,22 +1,42 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView.vue';
+import Auth from '../views/Auth.vue';
+import Profile from '../views/Profile.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView,
+    path: '/profile',
+    name: 'profile',
+    component: Profile,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.getItem('accessToken')) {
+        next({ name: 'auth' });
+      }
+      next();
+    },
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    path: '/auth',
+    name: 'auth',
+    component: Auth,
+    beforeEnter: (to, from, next) => {
+      if (localStorage.getItem('accessToken')) {
+        next({ name: 'profile' });
+      }
+      next();
+    },
+  },
+  {
+    path: '*',
+    name: 'home',
+    redirect: () => {
+      if (localStorage.getItem('accessToken')) {
+        return { name: 'auth' };
+      }
+      return { name: 'profile' };
+    },
   },
 ];
 
