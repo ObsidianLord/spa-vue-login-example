@@ -4,7 +4,11 @@
 module.exports = {
   content: ['./src/**/*.{html,js,vue}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Onest', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
