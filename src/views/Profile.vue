@@ -11,32 +11,32 @@
       class="self-center"
     >
     <div class="self-center text-center mb-4">
-      <div class="text-xl font-medium">
+      <h1 class="text-xl font-medium">
         {{user.full_name}}
-      </div>
-      <div class="font-medium text-gray-600">
+      </h1>
+      <h2 class="font-medium text-gray-600">
         {{user.position}}
-      </div>
+      </h2>
     </div>
     <div>
-      <div class="text-sm">Email:</div>
-      <div class="text-lg font-medium">{{ user.email }}</div>
+      <h3 class="text-sm">Email:</h3>
+      <h2 class="text-lg font-medium">{{ user.email }}</h2>
     </div>
     <div>
-      <div class="text-sm">Phone:</div>
-      <div class="text-lg font-medium">{{ user.phone }}</div>
+      <h3 class="text-sm">Phone:</h3>
+      <h2 class="text-lg font-medium">{{ user.phone }}</h2>
     </div>
     <div>
-      <div class="text-sm">Date of birth:</div>
-      <div class="text-lg font-medium">{{ user.dob }}</div>
+      <h3 class="text-sm">Date of birth:</h3>
+      <h2 class="text-lg font-medium">{{ user.dob }}</h2>
     </div>
     <div>
-      <div class="text-sm">Location:</div>
-      <div class="text-lg font-medium">{{ user.location }}</div>
+      <h3 class="text-sm">Location:</h3>
+      <h2 class="text-lg font-medium">{{ user.location }}</h2>
     </div>
     <div>
-      <div class="text-sm">Current time:</div>
-      <div class="text-lg font-medium">{{ user.time }}</div>
+      <h3 class="text-sm">Current time:</h3>
+      <h2 class="text-lg font-medium">{{ user.time }}</h2>
     </div>
     <BaseButton
       danger
