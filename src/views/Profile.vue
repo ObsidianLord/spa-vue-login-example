@@ -10,7 +10,7 @@
       height="128"
       class="self-center"
     >
-    <div class="self-center text-center">
+    <div class="self-center text-center mb-4">
       <div class="text-xl font-medium">
         {{user.full_name}}
       </div>
