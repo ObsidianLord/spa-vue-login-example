@@ -1,4 +1,8 @@
-# uprock
+# SPA Vue Login Example
+
+## Deployed demo
+[https://spa-vue-login-example.surge.sh](https://spa-vue-login-example.surge.sh)
+
 
 ## Project setup
 ```
@@ -19,6 +23,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
