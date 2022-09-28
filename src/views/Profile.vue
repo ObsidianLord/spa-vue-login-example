@@ -12,10 +12,10 @@
     >
     <div class="self-center text-center mb-3">
       <h1 class="text-xl font-medium">
-        {{user.full_name}}
+        {{ user.full_name }}
       </h1>
       <h2 class="font-medium text-gray-600">
-        {{user.position}}
+        {{ user.position }}
       </h2>
     </div>
     <div>
@@ -40,8 +40,8 @@
     </div>
     <BaseButton
       danger
-      @click.native="onLogout"
       class="mt-3"
+      @click.native="onLogout"
     >Log Out</BaseButton>
   </div>
 </template>

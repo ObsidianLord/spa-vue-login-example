@@ -1,6 +1,8 @@
 <template>
   <div class="max-w-sm w-full">
-    <h1 class="text-center font-medium text-5xl sm:text-6xl mb-6">Welcome.</h1>
+    <h1 class="text-center font-medium text-5xl sm:text-6xl mb-6">
+      Welcome.
+    </h1>
     <form
       action="/"
       method="post"
@@ -17,18 +19,18 @@
         {{ error }}
       </BaseMessage>
       <BaseInput
+        v-model="email"
+        :danger="isEmailError"
         input-id="email"
         input-type="email"
         label="Email"
-        :danger="isEmailError"
-        v-model="email"
       />
       <BaseInput
+        v-model="password"
+        :danger="isPasswordError"
         input-id="password"
         input-type="password"
         label="Password"
-        :danger="isPasswordError"
-        v-model="password"
       />
       <BaseButton
         tag="input"
