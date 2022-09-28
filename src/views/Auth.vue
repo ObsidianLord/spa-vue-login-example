@@ -1,11 +1,11 @@
 <template>
   <div class="max-w-sm w-full">
-    <h1 class="text-center font-medium text-6xl mb-6">Welcome.</h1>
+    <h1 class="text-center font-medium text-5xl sm:text-6xl mb-6">Welcome.</h1>
     <form
       action="/"
       method="post"
       novalidate="true"
-      class="w-full mx-auto p-10 bg-white"
+      class="w-full mx-auto p-6 sm:p-10 bg-white"
       @submit.prevent="submit"
     >
       <BaseMessage

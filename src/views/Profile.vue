@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white w-full mx-auto max-w-sm p-10 flex flex-col gap-4"
+    class="bg-white w-full mx-auto max-w-sm p-6 sm:p-10 flex flex-col gap-3 sm:gap-4"
     @submit.prevent="submit"
   >
     <img
@@ -10,7 +10,7 @@
       height="128"
       class="self-center"
     >
-    <div class="self-center text-center mb-4">
+    <div class="self-center text-center mb-3">
       <h1 class="text-xl font-medium">
         {{user.full_name}}
       </h1>
@@ -41,7 +41,7 @@
     <BaseButton
       danger
       @click.native="onLogout"
-      class="mt-4"
+      class="mt-3"
     >Log Out</BaseButton>
   </div>
 </template>
